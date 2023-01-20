@@ -1,0 +1,13 @@
+<svg
+          viewBox="0 0 1903 301"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path
+            fill="rgba(47, 73, 94, 1)"
+            d="M 0 187 C 297 187 693 51 990 51 L 990 51 L 990 0 L 0 0 Z"
+            stroke-width="0"></path>
+          <path
+            fill="rgba(47, 73, 94, 1)"
+            d="M 989 51 C 1263.2 51 1628.8 299 1903 299 L 1903 299 L 1903 0 L 989 0 Z"
+            stroke-width="0"></path>
+        </svg>

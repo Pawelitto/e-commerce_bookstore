@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.containerMain {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
