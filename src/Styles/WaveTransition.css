@@ -1,0 +1,25 @@
+.textwave {
+  position: relative;
+  top: 416px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70px;
+  width: 30%;
+}
+
+.wavebox p {
+  font-family: montserrat;
+  font-size: 24px;
+  text-align: center;
+}
+
+.wavebox p span {
+  font-weight: 600;
+  color: #a41fbe;
+}
+
+@media screen and (max-width: 991px) {
+  .wavebox p {
+    font-size: 12px;
+  }
+}
