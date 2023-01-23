@@ -1,0 +1,58 @@
+.content-App {
+  width: 100%;
+  height: 200vh;
+  opacity: 0.8;
+  background-color: #fcecff;
+}
+
+.textproducts {
+  position: relative;
+  top: -10%;
+  font-size: 24px;
+  text-align: center;
+}
+
+.textproducts span {
+  color: #a41fbe;
+  font-weight: bold;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 10px;
+}
+
+.sortowanie {
+  grid-row: 1 / 2;
+}
+
+@media screen and (max-width: 1080px) {
+  .textproducts {
+    width: 80%;
+    font-size: 16px;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 7px;
+  }
+  .sortowanie {
+    grid-column: 1 / 3;
+  }
+  .carda {
+    width: 160px;
+    height: 234px;
+    margin: 5px auto;
+  }
+  .book-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height: 50%;
+    width: 80%;
+  }
+}

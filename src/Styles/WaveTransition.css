@@ -1,10 +1,5 @@
-.textwave {
-  position: relative;
-  top: 416px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 70px;
-  width: 30%;
+.wavebox {
+  width: 100%;
 }
 
 .wavebox p {
@@ -18,8 +13,20 @@
   color: #a41fbe;
 }
 
+.textwave {
+  margin-top: 3%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 30%;
+}
+
 @media screen and (max-width: 991px) {
   .wavebox p {
     font-size: 12px;
+  }
+  .textwave {
+    transform: translate(-50%, 50%);
+    width: 70%;
   }
 }

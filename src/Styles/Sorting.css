@@ -1,0 +1,25 @@
+.sortowanie {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 190px;
+  height: 270px;
+  background-color: #f5f5f5;
+  border: 2px solid #a41fbe;
+  border-radius: 20px;
+}
+
+.sortowanie p {
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+.option-sorting {
+  margin: 6px;
+  margin-top: 11px;
+  text-align: center;
+  cursor: pointer;
+}

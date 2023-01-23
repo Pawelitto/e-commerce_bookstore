@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Search from './Search';
 import { FiUser } from 'react-icons/fi';
 import { RiShoppingBagLine } from 'react-icons/ri';
@@ -9,8 +9,22 @@ import logo from '../Images/book-high-resolution-logo-color-on-transparent-backg
 import '../Styles/NavBar.css';
 
 const NavBar = () => {
+  const [fix, setfix] = useState(false);
+
+  function setfixed() {
+    if (window.scrollY >= 50) {
+      setfix(false);
+    } else {
+      setfix(true);
+    }
+  }
+
+  window.addEventListener('scroll', setfixed);
+
   return (
-    <Navbar className="navbar-custom" expand="lg">
+    <Navbar
+      className={fix ? `navbar-custom` : `navbar-custom sticky`}
+      expand="lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
       <Navbar.Collapse className="lewo" id="basic-navbar-nav">

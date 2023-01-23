@@ -94,3 +94,13 @@
     opacity: 0.5;
   }
 }
+
+@media screen and (max-width: 991px) {
+  .scrolldown {
+    --sizeX: 20px;
+    --sizeY: 40px;
+  }
+  .chevrons {
+    width: 21px;
+  }
+}
