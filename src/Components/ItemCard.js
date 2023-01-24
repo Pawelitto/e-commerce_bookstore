@@ -13,7 +13,7 @@ const ItemCard = ({ title, price, author, cover }) => {
       <div className="book-title">{title}</div>
       <div className="book-author">{author}</div>
       <div className="book-footer">
-        <span>{price}PLN</span>
+        <span>{price} USD</span>
         <span className="iconshop">
           <BsCartPlus size={20} />
         </span>

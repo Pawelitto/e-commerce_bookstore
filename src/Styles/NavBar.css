@@ -38,6 +38,19 @@
 .ikonka {
   margin-left: 5%;
   margin-right: 5%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ikonka:hover,
+.ikonka:focus {
+  box-shadow: inset 0 -3.25em 0 0 #f19aff;
+}
+
+.ikonka:hover,
+.ikonka:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #f19aff;
+  transform: translateY(-0.3em);
 }
 
 .hover-underline-animation {
