@@ -10,6 +10,7 @@ import '../Styles/NavBar.css';
 
 const NavBar = () => {
   const [fix, setfix] = useState(false);
+  const [userShow, setUserShow] = useState(false);
 
   function setfixed() {
     if (window.scrollY >= 50) {
@@ -20,6 +21,11 @@ const NavBar = () => {
   }
 
   window.addEventListener('scroll', setfixed);
+
+  const handleUserShow = () => {
+    setUserShow((prevState) => !prevState);
+    console.log(userShow);
+  };
 
   return (
     <Navbar
@@ -45,7 +51,10 @@ const NavBar = () => {
       <Navbar.Collapse className="prawo" id="basic-navbar-nav">
         <AiOutlineHeart size={32} className="ikonka" />
         <RiShoppingBagLine size={32} className="ikonka" />
-        <FiUser size={32} className="ikonka" />
+        <div className={userShow ? 'userinfo active' : 'userinfo'}>
+          Zaloguj Zarejestruj
+        </div>
+        <FiUser size={32} className="ikonka" onClick={handleUserShow} />
         <Form inline className="ml-auto formularz">
           <Search />
         </Form>

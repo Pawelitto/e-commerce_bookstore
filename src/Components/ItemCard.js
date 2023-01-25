@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { BsCartPlus } from 'react-icons/bs';
+import { BsCartPlus, BsCartPlusFill } from 'react-icons/bs';
 
 import '../Styles/ItemCard.css';
 
 const ItemCard = ({ title, price, author, cover }) => {
+  const [hover, setHover] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHover(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHover(false);
+  };
+
   return (
-    <div class="carda">
+    <div className="carda">
       <div className="book-img">
         <img src={cover} alt={title} />
       </div>
@@ -14,8 +24,11 @@ const ItemCard = ({ title, price, author, cover }) => {
       <div className="book-author">{author}</div>
       <div className="book-footer">
         <span>{price} USD</span>
-        <span className="iconshop">
-          <BsCartPlus size={20} />
+        <span
+          className="iconshop"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
+          {hover ? <BsCartPlusFill size={20} /> : <BsCartPlus size={20} />}
         </span>
       </div>
     </div>
