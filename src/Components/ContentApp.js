@@ -1,8 +1,10 @@
-import React from 'react';
-import ItemCard from './ItemCard';
-import Sorting from './Sorting';
+import React, { useState, useEffect } from 'react';
+import ItemCard from './ItemCard_col';
+import ItemCardRow from './ItemCard_row';
+// import Sorting from './Sorting';
 
-import '../Styles/ContentApp.css';
+// import '../Styles/ContentApp.css';
+import '../Styles/CA_copy.css';
 
 const books = [
   {
@@ -104,17 +106,30 @@ const books = [
 ];
 
 const ContentApp = () => {
-  return (
-    <div className="content-App">
-      <div className="textproducts">
-        <span>NOWOŚCI</span> - Najnowsze książki dostępne już teraz
-      </div>
-      <div className="products">
-        <Sorting />
+  const [width, setWidth] = useState(window.innerWidth);
 
-        {books.map((book) => (
-          <ItemCard key={book.isbn} {...book} />
-        ))}
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleWindowResize);
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  const bloki = books.map((book) => <ItemCard key={book.isbn} {...book} />);
+  const bloki2 = books.map((book) => <ItemCardRow key={book.isbn} {...book} />);
+
+  return (
+    <div className="backgrounds">
+      <div className="content-App">
+        <div className="products">
+          {/* <Sorting /> */}
+
+          {width > 1080 ? bloki : bloki2}
+        </div>
       </div>
     </div>
   );

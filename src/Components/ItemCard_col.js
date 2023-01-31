@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { BsCartPlus, BsCartPlusFill } from 'react-icons/bs';
 
-import '../Styles/ItemCard.css';
+import '../Styles/ItemCard_col.css';
 
 const ItemCard = ({ title, price, author, cover }) => {
   const [hover, setHover] = useState(false);

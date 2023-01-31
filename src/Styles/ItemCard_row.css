@@ -1,0 +1,31 @@
+.carda {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  background-color: #f8fbfe;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.book-img {
+  height: 210px;
+  width: 151px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-footer .iconshop {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+}

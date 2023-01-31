@@ -1,5 +1,6 @@
 .wavebox {
   width: 100%;
+  position: relative;
 }
 
 .wavebox p {
@@ -14,16 +15,37 @@
 }
 
 .textwave {
+  z-index: 100;
   margin-top: 3%;
-  position: relative;
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, 0%);
   width: 30%;
 }
 
+.textproducts {
+  position: relative;
+  top: -10%;
+  font-size: 24px;
+  text-align: center;
+}
+
+.textproducts span {
+  color: #a41fbe;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1414px) {
+  .textwave {
+    font-size: small;
+    top: 40%;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .wavebox p {
-    font-size: 12px;
+    font-size: 13px;
   }
   .textwave {
     transform: translate(-50%, 50%);
