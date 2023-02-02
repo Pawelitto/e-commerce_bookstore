@@ -4,7 +4,7 @@ import { BsCartPlus, BsCartPlusFill } from 'react-icons/bs';
 
 import '../Styles/ItemCard_col.css';
 
-const ItemCard = ({ title, price, author, cover }) => {
+const ItemCard = ({ title, price, author, thumbnail }) => {
   const [hover, setHover] = useState(false);
 
   const handleMouseEnter = () => {
@@ -18,7 +18,7 @@ const ItemCard = ({ title, price, author, cover }) => {
   return (
     <div className="carda">
       <div className="book-img">
-        <img src={cover} alt={title} />
+        <img src={thumbnail} alt={title} />
       </div>
       <div className="book-title">{title}</div>
       <div className="book-author">{author}</div>
