@@ -24,10 +24,22 @@
 }
 
 .book-title {
+  margin-top: 10px;
   padding: 5px;
   font-size: 17px;
   font-weight: bold;
   text-align: center;
+}
+
+.book-rating {
+  position: absolute;
+  width: 100%;
+  padding-bottom: 5px;
+  font-size: 17px;
+  text-align: center;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .book-author {
@@ -48,4 +60,8 @@
   bottom: 0;
   right: 0;
   margin: 5px;
+}
+
+.iconCart {
+  cursor: pointer;
 }

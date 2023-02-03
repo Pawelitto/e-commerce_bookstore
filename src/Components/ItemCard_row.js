@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 
 import { BsCartPlus, BsCartPlusFill } from 'react-icons/bs';
 
-import '../Styles/ItemCard_col.css';
+import '../Styles/ItemCard_row.css';
 
-const ItemCardRow = ({ title, price, author, cover, pages }) => {
+const ItemCard = ({
+  title,
+  ratings_count,
+  author,
+  thumbnail,
+  average_rating,
+}) => {
   const [hover, setHover] = useState(false);
 
   const handleMouseEnter = () => {
@@ -16,28 +22,32 @@ const ItemCardRow = ({ title, price, author, cover, pages }) => {
   };
 
   return (
-    <>
-      <div className="carda">
-        <div className="book-img">
-          <img src={cover} alt={title} />
-        </div>
-        <div className="book-info">
-          <span className="book-title">{title}</span>
-          <span className="book-author">{author}</span>
-          <span className="book-rating">{pages}</span>
-        </div>
-        <div className="buy-info">
-          <span className="book-price">{price}</span>
-          <span
-            className="iconshop"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}>
-            {hover ? <BsCartPlusFill size={20} /> : <BsCartPlus size={20} />}
-          </span>
-        </div>
+    <div className="carda">
+      <div className="book-img">
+        <img src={thumbnail} alt={title} />
       </div>
-    </>
+      <div className="book-title">{title}</div>
+      <div className="book-author">{author}</div>
+      <div className="book-rating">
+        Średnia ocena: <b>{average_rating}</b>
+      </div>
+      <div className="book-footer">
+        <span>
+          {ratings_count} <b>PLN</b>
+        </span>
+        <span
+          className="iconshop"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}>
+          {hover ? (
+            <BsCartPlusFill class="iconCart" size={20} />
+          ) : (
+            <BsCartPlus class="iconCart" size={20} />
+          )}
+        </span>
+      </div>
+    </div>
   );
 };
 
-export default ItemCardRow;
+export default ItemCard;

@@ -1,19 +1,19 @@
 .carda {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  width: 50%;
+  width: 190px;
+  height: 350px;
+  margin: 10px auto;
   background-color: #f8fbfe;
   border-radius: 8px;
-  z-index: 100;
+  z-index: 1;
 }
 
 .book-img {
-  height: 210px;
-  width: 151px;
-  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
+  height: 60%;
+  width: 80%;
 }
 
 .book-img img {
@@ -23,9 +23,45 @@
   border-radius: 8px;
 }
 
+.book-title {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.book-rating {
+  position: absolute;
+  width: 100%;
+  padding-bottom: 5px;
+  font-size: 17px;
+  text-align: center;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.book-author {
+  padding-left: 5px;
+  font-size: 14px;
+}
+
+.book-footer {
+  width: 100%;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .book-footer .iconshop {
   position: absolute;
   bottom: 0;
   right: 0;
   margin: 5px;
+}
+
+.iconCart {
+  cursor: pointer;
 }
