@@ -5,7 +5,7 @@
 .content-App {
   width: 80%;
   margin: auto;
-  height: 200vh;
+  /* height: 200vh; */
   opacity: 0.9;
   background-color: #fcecff;
 }
@@ -15,6 +15,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 10px;
+}
+
+.mobile {
+  display: block;
 }
 
 @media screen and (max-width: 1080px) {
@@ -30,7 +34,6 @@
     display: none;
   }
   .products {
-    display: block;
     padding-top: 50px;
   }
 }

@@ -40,9 +40,9 @@ const ItemCard = ({
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}>
           {hover ? (
-            <BsCartPlusFill class="iconCart" size={20} />
+            <BsCartPlusFill className="iconCart" size={20} />
           ) : (
-            <BsCartPlus class="iconCart" size={20} />
+            <BsCartPlus className="iconCart" size={20} />
           )}
         </span>
       </div>
