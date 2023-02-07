@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Przed uruchomieniem aplikacji należy się upewnić że [backend](https://github.com/Pawelitto/e-commerce_bookstore_backend) jest uruchomiony.
+
 ## Available Scripts
 
 In the project directory, you can run:
