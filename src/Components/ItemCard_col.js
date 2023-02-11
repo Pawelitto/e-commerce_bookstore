@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 
 import { BsCartPlus, BsCartPlusFill } from 'react-icons/bs';
 
+import '../Styles/ItemC_row.css';
 import '../Styles/ItemCard_col.css';
 
 const ItemCard = ({
   title,
   ratings_count,
-  author,
+  authors,
   thumbnail,
   average_rating,
+  mode,
 }) => {
   const [hover, setHover] = useState(false);
 
@@ -22,17 +24,19 @@ const ItemCard = ({
   };
 
   return (
-    <div className="carda">
+    <div className={'carda ' + (mode ? 'colmode' : 'rowmode')}>
       <div className="book-img">
         <img src={thumbnail} alt={title} />
       </div>
-      <div className="book-title">{title}</div>
-      <div className="book-author">{author}</div>
+      <div className="book-title">
+        <b>{title}</b>
+      </div>
+      <div className="book-author">{authors}</div>
       <div className="book-rating">
         Średnia ocena: <b>{average_rating}</b>
       </div>
       <div className="book-footer">
-        <span>
+        <span className="price">
           {ratings_count} <b>PLN</b>
         </span>
         <span

@@ -1,0 +1,68 @@
+.rowmode {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 20px auto;
+  background-color: #f8fbfe;
+  border-radius: 8px;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.rowmode .book-img {
+  grid-area: 1 / 1 / 3 / 2;
+  margin: auto;
+}
+
+.rowmode .book-img img {
+  padding: 10px;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.rowmode .book-title {
+  grid-area: 1 / 2 / 2 / 3;
+  text-align: center;
+  padding: 8px;
+}
+
+.rowmode .book-author {
+  grid-area: 1 / 3 / 2 / 4;
+  text-align: right;
+  padding: 8px;
+}
+
+.rowmode .book-rating {
+  grid-area: 2 / 2 / 3 / 3;
+  position: absolute;
+  bottom: 10px;
+}
+
+.rowmode .book-footer {
+  grid-area: 2 / 3 / 3 / 4;
+  position: relative;
+}
+
+.rowmode .book-footer .price {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+}
+
+.rowmode .book-footer .iconshop {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  margin: 5px;
+}
+
+.rowmode .iconCart {
+  cursor: pointer;
+}

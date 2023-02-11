@@ -25,13 +25,14 @@ const ContentApp = () => {
   }, []);
 
   const cards_column = booksData.map((book) => (
-    <ItemCard key={book.isbn} {...book} mode={width > 1080 ? true : false} />
+    <ItemCard key={book.isbn} {...book} mode={width > 768 ? true : false} />
   ));
 
   return (
     <div className="backgrounds">
       <div className="content-App">
-        <div className={width < 768 ? 'products mobile' : 'products'}>
+        {/* <div className={width < 768 ? 'products mobile' : 'products'}> */}
+        <div className={'products ' + (width < 768 ? 'mobile' : '')}>
           {/* <Sorting /> */}
 
           {cards_column}
